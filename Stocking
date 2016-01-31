@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    // Constants
+    int SHARES_BOUGHT=1000;
+    int SHARES_SOLD=1000;
+    double COMMISSION_RATE=.02;
+    double PURCHASE_PRICE=45.5;
+    double SALE_PRICE=56.9;
+
+    // Calculations
+    double purchase_total=SHARES_BOUGHT*PURCHASE_PRICE;
+    double sale_total=SHARES_SOLD*SALE_PRICE;
+    double purchase_commission=COMMISSION_RATE*purchase_total;
+    double selling_commission=COMMISSION_RATE*sale_total;
+    double total_commission=selling_commission+purchase_commission;
+    double profit= (sale_total-purchase_total)-total_commission;
+
+    // Outputs
+    cout <<"Cost of Purchase:"<< endl;
+    cout << purchase_total<< " dollars"<< endl;
+    cout <<"Sale of Stock:"<< endl;
+    cout <<sale_total<< " dollars"<< endl;
+    cout <<"Commission Paid:"<< endl;
+    cout << total_commission<< " dollars"<< endl;
+    cout <<"Profit:"<< endl;
+    cout <<profit << " dollars"<< endl;
+
+    return 0;
+}
