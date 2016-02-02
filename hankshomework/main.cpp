@@ -32,12 +32,12 @@ int main() {
 
     sale_bought = sale_bought - commission_paid_buy;
     sale_sold = sale_sold - commission_paid_sale;
-    sale_profit = sale_sold- sale_bought ;
+    sale_profit = sale_sold - sale_bought ;
 
     if (sale_profit > 1)
-        std::cout << "Yor profit would be $" << sale_profit << '\n';
+        std::cout << "Your profit would be $" << sale_profit << '\n';
     else
-        std::cout << "Yor Lose would be $-" << sale_profit << '\n';
+        std::cout << "Your Lose would be $-" << sale_profit << '\n';
 
     return 0;
 }
