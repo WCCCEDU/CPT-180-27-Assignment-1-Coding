@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 /*Joe bought 1k stocks for 45.50 , Broker got 2%
  * Joe sold 1k stocks for 56.90 , Broker got 2%
@@ -17,18 +18,25 @@ int main() {
     double sale_bought , sale_sold , sale_profit , commssion_paid_buy , commssion_paid_sale;
     char new_line = '\n';
 
+
     sale_bought = SHARE_BOUGHT * PURCHASE_PRICE;
     commssion_paid_buy = sale_bought * COMMISSION_RATE;
 
-    std::cout <<"You spent "<<sale_bought<<" on stocks and paid "<<commssion_paid_buy<<" to your broker."<<new_line;
+    std::cout <<"You spent $"<<sale_bought<<" on stocks and paid $"<<commssion_paid_buy<<" to your broker."<<new_line;
 
     sale_sold = SHARE_SOLD * SALE_PRICE;
     commssion_paid_sale = sale_sold * COMMISSION_RATE;
 
-    std::cout <<"You earned "<<sale_sold<<" on stocks but your broker took "<<commssion_paid_sale<<new_line;
+    std::cout <<"You earned $"<<sale_sold<<" on stocks but your broker took $"<<commssion_paid_sale<<new_line;
 
+    sale_bought = sale_bought - commssion_paid_buy;
+    sale_sold = sale_sold - commssion_paid_sale;
     sale_profit = sale_sold- sale_bought ;
 
-    std::cout <<"Yor profit would be "<<sale_profit<<new_line;
+    if (sale_profit > 1)
+        std::cout <<"Yor profit would be $"<<sale_profit<<new_line;
+    else
+        std::cout <<"Yor Lose would be $-"<<sale_profit<<new_line;
+
     return 0;
 }
