@@ -1,35 +1,35 @@
-### Assignment 1-2
-##### Coding (Stock Transactions)
-For the second half of your assignment this week we need to get down to writing some code.
+#include <iostream>
 
-Follow the same process from Assignment 1 Github to clone and save your code in a feature branch on your fork. You will then open a PR with your source code for review.
 
-##### Here is what you will build:
-###### Stock Transaction Program
-Last month Joe purchased some stock in Acme Software, Inc. Here are the details of the purchase:
-- The number of shares that Joe purchased was 1,000.
-- When Joe purchased the stock, he paid $45.50 per share.
-- Joe paid his stockbroker a commission that amounted to 2% of the amount he paid for the stock.
+int main() {
+         //Variable Declaration/Initialization
+    const double PURCHASE_PRICE= 45.50;
+    const int SHARES_BOUGHT= 1000;
+    const double COMMISSION_RATE = 0.02;
+    const int SHARES_SOLD = 1000;
+    const double SALE_PRICE = 56.90;
 
-Two weeks later Joe sold the stock. Here are the details of the sale:
-- The number of shares that Joe sold was 1,000.
-- He sold the stock for $56.90 per share.
-- He paid his stockbroker another commission that amounted to 2% of the amount
-he received for the stock.
+        //Amount Joe Paid for shares
+    double purchase_amount = PURCHASE_PRICE * SHARES_BOUGHT;
+    std::cout << "Joe Paid for his shares: $" << purchase_amount << std::endl;
 
-Write a program that displays the following information:
-- The amount of money Joe paid for the stock.
-- The amount of commission Joe paid his broker when he bought the stock.
-- The amount that Joe sold the stock for.
-- The amount of commission Joe paid his broker when he sold the stock.
-- Display the amount of profit that Joe made after selling his stock and paying the two commissions to his broker. (If the amount of profit that your program displays is a negative number, then Joe lost money on the transaction.)
+        //Amount Joe sold his shares for
+    double sold_amount = SALE_PRICE * SHARES_SOLD;
+    std::cout << "Amount Joe sold his shares: $" << sold_amount << std::endl;
 
-##### How to write the program:
-- Use Named Constants for things like:
-  - SHARES_BOUGHT
-  - SHARES_SOLD
-  - COMMISSION_RATE
-  - PURCHASE_PRICE
-  - SALE_PRICE
-- Place all of your logic in the main function
+        //Amount Joe Paid his broker after he bought shares
+    double first_broker_amount = (purchase_amount * COMMISSION_RATE);
+    std::cout << "Amount Joe paid his broker before selling stock: $" << first_broker_amount << std::endl;
+
+        //Amount Joe paid his broker after he sold his shares
+    double second_broker_amount = sold_amount * COMMISSION_RATE;
+    std::cout << "Amount Joe paid his broker after selling stock: $ " << second_broker_amount << std::endl;
+
+     //Amount Joe earned overall after paying his broker
+   double total_amount_earned = (sold_amount - purchase_amount) - (first_broker_amount + second_broker_amount);
+    std::cout << "Amount Joe overall earned: $" << total_amount_earned << std::endl;
+
+    return 0;
+}
+
 
