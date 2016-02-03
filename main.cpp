@@ -22,7 +22,7 @@ int main() {
 
     // Output display code
 
-    cout << setprecision(2) <<  fixed;
+    cout << setprecision(2) << fixed;
     cout << "Joe bought " << shares_bought << " " << "shares of stock" << " ";
     cout << "at a price of" << " " << "$" << purchase_price << endl;
     cout << "The Commission to his broker for his purchase was: " << "$" << purchase_commission << endl;
