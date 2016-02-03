@@ -24,12 +24,12 @@ int main() {
 
     cout << setprecision(2) << fixed;
     cout << "Joe bought " << shares_bought << " " << "shares of stock" << " ";
-    cout << "at a price of" << " " << "$" << purchase_price << endl;
+    cout << "at a price of " << "$" << purchase_price << endl;
     cout << "The Commission to his broker for his purchase was: " << "$" << purchase_commission << endl;
     cout << "Joe then sold " << shares_sold << " " << "shares of stock" << " ";
     cout << "at a price of" << " " << "$" << selling_price << endl;
-    cout << "The Commission to his broker for his sale was:" << " " << "$" << selling_commission << endl;
-    cout << "Joe's total Profit / Loss was" << " " << "$" << profit_loss << endl;
+    cout << "The Commission to his broker for his sale was: " << "$" << selling_commission << endl;
+    cout << "Joe's total Profit was " << "$" << profit_loss << endl;
     cout << "Not bad for a days work";
 
     return 0;
