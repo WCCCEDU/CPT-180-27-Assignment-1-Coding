@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -12,7 +13,7 @@ int main() {
     double selling_price = 56.90;
 
 
-   // Main math function
+    // Main math function
     double purchase_commission = (shares_bought * purchase_price * commission_rate);
     double selling_commission = (shares_sold * selling_price * commission_rate);
     double total_purchase = ((shares_bought * purchase_price) + purchase_commission);
@@ -21,14 +22,15 @@ int main() {
 
     // Output display code
 
-    cout << "Joe bought " << shares_bought << " " << "shares of stock"  << " ";
+    cout << setprecision(2) <<  fixed;
+    cout << "Joe bought " << shares_bought << " " << "shares of stock" << " ";
     cout << "at a price of" << " " << "$" << purchase_price << endl;
-    cout << "The Commission to his broker for his purchase was: " << "$" << fixed(2)purchase_commission << endl;
+    cout << "The Commission to his broker for his purchase was: " << "$" << purchase_commission << endl;
     cout << "Joe then sold " << shares_sold << " " << "shares of stock" << " ";
     cout << "at a price of" << " " << "$" << selling_price << endl;
     cout << "The Commission to his broker for his sale was:" << " " << "$" << selling_commission << endl;
-    cout << "Joe's total Profit / Loss was" << " " << "$" << profit_loss;
-    cout << "Not bad for a days work"
+    cout << "Joe's total Profit / Loss was" << " " << "$" << profit_loss << endl;
+    cout << "Not bad for a days work";
 
     return 0;
 }
