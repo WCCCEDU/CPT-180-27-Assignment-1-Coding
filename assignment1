@@ -3,11 +3,11 @@ using namespace std;
 
 //declaring the variables
 
-double purchased_shares = 1000;
-double sold_shares = 1000;
-double comission = 0.02;
-double price_purchase = 45.50;
-double price_sold = 56.90;
+const double purchased_shares = 1000;
+const double sold_shares = 1000;
+const double comission = 0.02;
+const double price_purchase = 45.50;
+const double price_sold = 56.90;
 
 int main() {
 
