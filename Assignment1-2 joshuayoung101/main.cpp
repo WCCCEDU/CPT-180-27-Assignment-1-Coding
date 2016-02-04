@@ -35,6 +35,6 @@ int main() {
         << std::endl;
 
     // Calculates and displays total profit
-    double PROFIT = SALE_PRICE-(COMMISSION_PRICE_BOUGHT+COMMISSION_PRICE_SOLD);
+    double PROFIT = SALE_PRICE-(COMMISSION_PRICE_BOUGHT+COMMISSION_PRICE_SOLD+AMOUNT_PAID);
     std::cout << "Total profit after commission fees = $" << PROFIT << std::endl;
 }
