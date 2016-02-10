@@ -6,6 +6,7 @@ int main() {
 
     const int SHARES_BOUGHT = 1000;
     const double PURCHASE_PRICE = 45.50;
+
     double money_spent = double(SHARES_BOUGHT*PURCHASE_PRICE);
     std::cout << "Amount of money spent on buying stocks = " << double(money_spent) << std::endl;
     const double COMMISSION_RATE = 0.02;
